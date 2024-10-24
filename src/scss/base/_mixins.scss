@@ -1,0 +1,130 @@
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: local("#{$file}"), url("../fonts/#{$file}.woff2") format("woff2"),
+      url("../fonts/#{$file}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin resetStyles {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+@mixin focusLink {
+  outline: 2px solid transparent;
+  &:focus-visible {
+    outline: 2px solid $blue;
+    outline-offset: 3px;
+    @include transition(outline-color);
+  }
+}
+
+// @mixin focusReset {
+// 	&:focus {
+// 		outline: none;
+// 	}
+// }
+
+@mixin resetButton {
+  @include resetStyles;
+  // @include focusReset;
+}
+
+@mixin resetInput {
+  @include resetStyles;
+  // @include focusReset;
+}
+
+@mixin resetList {
+  @include resetStyles;
+  list-style-type: none;
+}
+
+// Media queries
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: $mobile-sm) {
+    @content;
+  }
+}
+
+@mixin transition($properties...) {
+  $transition-duration: $transition-duration;
+  $transition-function: $transition-function;
+
+  @if length($properties) ==1 {
+    transition: $properties $transition-duration $transition-function;
+  } @else {
+    transition-property: $properties;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-function;
+  }
+}
+
+// Controllers
+
+/* Смартфоны, устройства с сенсорным экраном, с которым работают пальцами */
+@mixin touch {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+/* Устройства с сенсорным экраном, с которым работают стилусом */
+@mixin stylus {
+  @media (hover: none) and (pointer: fine) {
+    @content;
+  }
+}
+
+/* Мышь, тачпад */
+@mixin mouse {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @include mouse {
+    @content;
+  }
+
+  @include touch {
+    @content;
+  }
+}

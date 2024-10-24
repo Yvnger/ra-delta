@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "outDir": "./assets/js",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true // Добавлено для пропуска проверки библиотек
+    },
+    "include": ["src/ts/**/*.ts"],
+    "exclude": ["node_modules"]
+}
