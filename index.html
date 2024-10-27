@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gulp pack for easy html/php markup development" />
+    <meta name="keywords" content="" />
+    <link type="text/css" rel="stylesheet" href="css/style.min.css" />
+    <title>RA-DELTA TEST</title>
+  </head>
+</html>
+
+
+<body>
+    <header id="header" class="header">
+  <div class="container">
+    <div class="header__logo-wrap">
+      <svg class="header__logo" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="./img/sprite.svg#logo"></use>
+      </svg>
+    </div>
+
+    <div class="header__nav js-nav-wrap">
+      <nav class="nav js-nav-wrap">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#features" class="nav__link">О программе</a>
+          </li>
+          <li class="nav__item">
+            <a href="#capability" class="nav__link">Функции</a>
+          </li>
+          <li class="nav__item">
+            <a href="#capability" class="nav__link">Поддержка</a>
+          </li>
+        </ul>
+
+        <a href="#" class="btn btn--header nav__download-btn"
+          >Установить 7-zip</a
+        >
+      </nav>
+    </div>
+
+    <button class="header__hamburger hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__info">
+      <div class="hero__heading">
+        <h1 class="hero__title">7–Zip</h1>
+        <p class="hero__subtitle">Идеальный инструмент для архивации</p>
+      </div>
+      <p class="hero__description">
+        Надёжное сжатие, шифрование и управление файлами
+      </p>
+
+      <div class="hero__action">
+        <a
+          href="javascript:void(0)"
+          class="btn btn--hero hero__action-btn hero__action-btn--windows"
+        >
+          Скачать для Windows
+        </a>
+
+        <span class="hero__action-caption">Совместим с Windows XP и выше</span>
+      </div>
+    </div>
+
+    <div class="hero__illustration">
+      <div class="hero__illustration-wrap">
+        <picture>
+          <source
+            srcset="./img/hero/folder.webp 1x, ./img/hero/folder@2x.webp 2x"
+          />
+          <img
+            class="hero__illustration-folder"
+            src="./img/hero/folder.png"
+            alt=""
+          />
+        </picture>
+        <picture>
+          <img
+            class="hero__illustration-laptop"
+            src="./img/hero/laptop.svg"
+            alt=""
+          />
+        </picture>
+        <picture>
+          <img
+            class="hero__illustration-window"
+            src="./img/hero/window.svg"
+            alt=""
+          />
+        </picture>
+        <div class="hero__illustration-photo-wrap">
+          <picture>
+            <img
+              class="hero__illustration-photo hero__illustration-photo--1"
+              src="./img/hero/photo_1.svg"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              class="hero__illustration-photo hero__illustration-photo--2"
+              src="./img/hero/photo_2.svg"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              class="hero__illustration-photo hero__illustration-photo--3"
+              src="./img/hero/photo_3.svg"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section features" id="features">
+  <div class="container">
+    <h2 class="section__title">Ваш надёжный компаньон в мире архивов</h2>
+
+    <div class="features__grid">
+      <div class="features__column">
+        <ul class="features__list">
+          <li
+            class="features__item feature-item js-feature-item"
+            data-description="Программа основана на открытом исходном коде, что позволяет пользователям убедиться в её надёжности и безопасности."
+            data-id="1"
+          >
+            <div class="feature-item__icon-wrap">
+              <div
+                class="feature-item__progress progress-circle js-progress"
+                data-progress="0"
+              >
+                <div class="circle">
+                  <div class="full progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                  </div>
+                  <div class="progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                    <div
+                      class="progress-circle__fill progress-circle__bar"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-circle__overlay"></div>
+              </div>
+
+              <picture>
+                <source
+                  srcset="
+                    ./img/features/1-features-icon@2x.webp 2x,
+                    ./img/features/1-features-icon.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/features/1-features-icon@2x.png 2x,
+                    ./img/features/1-features-icon.png
+                  "
+                  type="image/png"
+                />
+                <img
+                  class="feature-item__icon"
+                  src="./img/features/1-features-icon.png"
+                  srcset="./img/features/1-features-icon@2x.png"
+                  alt="Открытый исходный код"
+                />
+              </picture>
+            </div>
+
+            <p class="feature-item__title">Открытый исходный код</p>
+          </li>
+          <li
+            class="features__item feature-item js-feature-item"
+            data-description="7–Zip обеспечивает более высокую степень сжатия файлов по сравнению с другими архиваторами, особенно в форматах 7z и zip."
+            data-id="2"
+          >
+            <div class="feature-item__icon-wrap">
+              <div
+                class="feature-item__progress progress-circle js-progress"
+                data-progress="0"
+              >
+                <div class="circle">
+                  <div class="full progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                  </div>
+                  <div class="progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                    <div
+                      class="progress-circle__fill progress-circle__bar"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-circle__overlay"></div>
+              </div>
+
+              <picture>
+                <source
+                  srcset="
+                    ./img/features/2-features-icon@2x.webp 2x,
+                    ./img/features/2-features-icon.webp
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/features/2-features-icon@2x.png 2x,
+                    ./img/features/2-features-icon.png
+                  "
+                  type="image/png"
+                />
+                <img
+                  class="feature-item__icon"
+                  src="./img/features/2-features-icon.png"
+                  srcset="./img/features/2-features-icon@2x.png"
+                  alt="Высокая степень сжатия"
+                />
+              </picture>
+            </div>
+
+            <p class="feature-item__title">Высокая степень сжатия</p>
+          </li>
+          <li
+            class="features__item feature-item js-feature-item"
+            data-description="Можно защитить свои архивы паролем с использованием алгоритма шифрования AES-256, что обеспечивает надёжную защиту данных."
+            data-id="3"
+          >
+            <div class="feature-item__icon-wrap">
+              <div
+                class="feature-item__progress progress-circle js-progress"
+                data-progress="0"
+              >
+                <div class="circle">
+                  <div class="full progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                  </div>
+                  <div class="progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                    <div
+                      class="progress-circle__fill progress-circle__bar"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-circle__overlay"></div>
+              </div>
+
+              <picture>
+                <source srcset="./img/features/3-features-icon@2x.webp 2x, ./img/features/3-features-icon.webp" type="image/webp" />
+                <source srcset="./img/features/3-features-icon@2x.png 2x, ./img/features/3-features-icon.png" type="image/png" />
+                <img
+                  class="feature-item__icon"
+                  src="./img/features/3-features-icon.png"
+                  srcset="./img/features/3-features-icon@2x.png"
+                  alt="Надёжное шифрование"
+                />
+              </picture>
+            </div>
+
+            <p class="feature-item__title">Надёжное шифрование</p>
+          </li>
+          <li
+            class="features__item feature-item js-feature-item"
+            data-description="7–Zip может использовать несколько ядер процессора для ускорения процесса архивирования и распаковки файлов."
+            data-id="4"
+          >
+            <div class="feature-item__icon-wrap">
+              <div
+                class="feature-item__progress progress-circle js-progress"
+                data-progress="0"
+              >
+                <div class="circle">
+                  <div class="full progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                  </div>
+                  <div class="progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                    <div
+                      class="progress-circle__fill progress-circle__bar"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-circle__overlay"></div>
+              </div>
+
+              <picture>
+                <source srcset="./img/features/4-features-icon@2x.webp 2x, ./img/features/4-features-icon.webp" type="image/webp" />
+                <source srcset="./img/features/4-features-icon@2x.png 2x, ./img/features/4-features-icon.png" type="image/png" />
+                <img
+                  class="feature-item__icon"
+                  src="./img/features/4-features-icon.png"
+                  srcset="./img/features/4-features-icon@2x.png"
+                  alt="Многопоточное сжатие файлов"
+                />
+              </picture>
+            </div>
+
+            <p class="feature-item__title">Многопоточное сжатие файлов</p>
+          </li>
+          <li
+            class="features__item feature-item js-feature-item"
+            data-description="Проверка целостности файлов в архиве позволяет убедиться в отсутствии ошибок или запустить восстановление повреждённых данных."
+            data-id="5"
+          >
+            <div class="feature-item__icon-wrap">
+              <div
+                class="feature-item__progress progress-circle js-progress"
+                data-progress="0"
+              >
+                <div class="circle">
+                  <div class="full progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                  </div>
+                  <div class="progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                    <div
+                      class="progress-circle__fill progress-circle__bar"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-circle__overlay"></div>
+              </div>
+
+              <picture>
+                <source srcset="./img/features/5-features-icon@2x.webp 2x, ./img/features/5-features-icon.webp" type="image/webp" />
+                <source srcset="./img/features/5-features-icon@2x.png 2x, ./img/features/5-features-icon.png" type="image/png" />
+                <img
+                  class="feature-item__icon"
+                  src="./img/features/5-features-icon.png"
+                  srcset="./img/features/5-features-icon@2x.png"
+                  alt="Тестирования архивов"
+                />
+              </picture>
+            </div>
+
+            <p class="feature-item__title">Тестирования архивов</p>
+          </li>
+          <li
+            class="features__item feature-item js-feature-item"
+            data-description="7–Zip имеет поддержку многих языков, в том числе понятный и удобный интерфейс на русском, что облегчает работу с программой."
+            data-id="6"
+          >
+            <div class="feature-item__icon-wrap">
+              <div
+                class="feature-item__progress progress-circle js-progress"
+                data-progress="0"
+              >
+                <div class="circle">
+                  <div class="full progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                  </div>
+                  <div class="progress-circle__slice">
+                    <div class="progress-circle__fill"></div>
+                    <div
+                      class="progress-circle__fill progress-circle__bar"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-circle__overlay"></div>
+              </div>
+
+              <picture>
+                <source srcset="./img/features/6-features-icon@2x.webp 2x, ./img/features/6-features-icon.webp" type="image/webp" />
+                <source srcset="./img/features/6-features-icon@2x.png 2x, ./img/features/6-features-icon.png" type="image/png" />
+                <img
+                  class="feature-item__icon"
+                  src="./img/features/6-features-icon.png"
+                  srcset="./img/features/6-features-icon@2x.png"
+                  alt="Русскоязычный интерфейс"
+                />
+            </div>
+
+            <p class="feature-item__title">Русскоязычный интерфейс</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="features__column">
+        <div class="features-detail js-features-detail-wrap">
+          <p class="features-detail__description js-feature-description">
+            Программа основана на открытом исходном коде, что позволяет
+            пользователям убедиться в её надёжности и безопасности.
+          </p>
+          <picture>
+            <source
+              srcset="
+                ./img/features/1-features-image@2x.webp 2x,
+                ./img/features/1-features-image.webp
+              "
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./img/features/01-features-image@2x.png 2x,
+                ./img/features/01-features-image.png
+              "
+              type="image/png"
+            />
+            <img
+              class="features-detail__image"
+              src="./img/features/01-features-image.png"
+              srcset="./img/features/01-features-image@2x.png"
+              alt="@@title"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section section--alt capability" id="capability">
+  <div class="container">
+    <h2 class="section__title">Кроссплатформенность и работа с форматами</h2>
+
+    <ul class="capability__items">
+      <li class="capability__item capability-item">
+        <span class="capability-item__label">Совместим с платформами</span>
+        <div class="capability-item__value">
+          <div
+            class="capability-item__value-row capability-item__value-row--os"
+          >
+            <div class="os">
+              <picture>
+                <source srcset="./img/os-icon-macos.webp" type="image/webp" />
+                <source
+                  srcset="./img/os-icon-macos@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source srcset="./img/os-icon-macos.png" type="image/png" />
+                <source
+                  srcset="./img/os-icon-macos@2x.png 2x"
+                  type="image/png"
+                />
+                <img
+                  class="os__icon os__icon--macos"
+                  src="./img/os-icon-macos.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="os">
+              <picture>
+                <source srcset="./img/os-icon-windows.webp" type="image/webp" />
+                <source
+                  srcset="./img/os-icon-windows@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source srcset="./img/os-icon-windows.png" type="image/png" />
+                <source
+                  srcset="./img/os-icon-windows@2x.png 2x"
+                  type="image/png"
+                />
+                <img
+                  class="os__icon os__icon--windows"
+                  src="./img/os-icon-windows.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="os">
+              <picture>
+                <source srcset="./img/os-icon-linux.webp" type="image/webp" />
+                <source
+                  srcset="./img/os-icon-linux@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source srcset="./img/os-icon-linux.png" type="image/png" />
+                <source
+                  srcset="./img/os-icon-linux@2x.png 2x"
+                  type="image/png"
+                />
+                <img
+                  class="os__icon os__icon--linux"
+                  src="./img/os-icon-linux.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="capability__item capability-item">
+        <span class="capability-item__label">
+          Форматы, которые 7–Zip может запаковывать и распаковать
+        </span>
+
+        <div class="capability-item__value">
+          <div class="capability-item__value-row">
+            
+  <div class="shell shell--h">
+    <span class="shell__label js-shell-label">7z</span>
+  </div>
+  
+
+  <div class="shell shell--h">
+    <span class="shell__label js-shell-label">ZIP</span>
+  </div>
+  
+
+  <div class="shell shell--h">
+    <span class="shell__label js-shell-label">WIM</span>
+  </div>
+  
+
+  <div class="shell shell--h">
+    <span class="shell__label js-shell-label">XZ</span>
+  </div>
+  
+
+  <div class="shell shell--h">
+    <span class="shell__label js-shell-label">GZIP</span>
+  </div>
+  
+
+  <div class="shell shell--h">
+    <span class="shell__label js-shell-label">TAR</span>
+  </div>
+  
+
+          </div>
+        </div>
+      </li>
+      <li class="capability__item capability-item">
+        <span class="capability-item__label">
+          Форматы, которые 7–Zip может распаковать
+        </span>
+        <div class="capability-item__value">
+          <div class="capability-item__slider" data-swiper-autoplay="2000">
+            <div class="swiper-wrapper">
+              
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">APFS</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">AR</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">ARJ</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">CAB</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">CHM</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">CPIO</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">CramFS</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">DMG</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">EXT</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">FAT</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">GPT</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">HFS</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">IHEX</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">ISO</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">LZH</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">LZMA</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">MBR</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">MSI</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">NSIS</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">NTFS</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">QCOW2</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">RAR</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">RPM</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">UDF</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">UEFI</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">VDI</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">VHD</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">VHDX</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">VMDK</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">XAR</span>
+  </div>
+  
+</div>
+
+
+<div class="capability-item__slider-item">
+  
+  <div class="shell shell--v">
+    <span class="shell__label js-shell-label">Z</span>
+  </div>
+  
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer"></footer>
+	<script src="js/bundle.js"></script>
+
+</body>
+
+</html>
