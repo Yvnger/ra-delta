@@ -1,0 +1,158 @@
+.capability {
+  padding: 148px 0 120px;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  &__items {
+    @include resetList;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @include tablet {
+      gap: 40px;
+    }
+  }
+
+  &-item {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "label label label label label value value value value value value value";
+    gap: 28px;
+    align-items: center;
+    min-height: 100px;
+
+    @include laptop {
+      // grid-template-columns: 1fr;
+      // grid-template-areas: "label" "value";
+      // min-height: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      grid-area: label;
+      padding-left: 12px;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 42px;
+      letter-spacing: 0.7px;
+      color: $dark;
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -1px;
+        display: block;
+        margin-left: -1px;
+        flex-shrink: 0;
+        width: 4px;
+        height: 100%;
+        background-color: $blue-300;
+        border-radius: 4px;
+      }
+    }
+
+    &:not(:first-child) {
+      align-items: stretch;
+    }
+
+    &__slider {
+      position: absolute;
+      left: -20px;
+      padding-left: 20px;
+      right: -100vw;
+      height: 100px;
+      mask: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 95px
+      );
+
+      @include laptop {
+        position: relative;
+        overflow: hidden;
+        left: 0;
+        padding-left: 0;
+        mask: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 10%,
+          rgba(255, 255, 255, 1) 90%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      &-item {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        height: 100%;
+        position: relative;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: transform, -webkit-transform;
+        display: block;
+
+        @include laptop {
+          display: flex;
+          // justify-content: center;
+          // width: 100%;
+        }
+      }
+    }
+
+    &__value {
+      position: relative;
+      display: flex;
+      align-items: center;
+      grid-area: value;
+      min-height: 100px;
+
+      @include laptop {
+        overflow: hidden;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -100vw;
+        bottom: 0;
+        left: 100%;
+      }
+
+      &-row {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 24px;
+        width: 100%;
+
+        @include tablet {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px;
+
+          &--os {
+            display: grid;
+            grid-auto-rows: 1fr;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

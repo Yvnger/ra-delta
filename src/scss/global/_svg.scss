@@ -1,0 +1,9 @@
+.--svg__icon_windows,.--svg__icon_windows-before::before,.--svg__icon_windows-after::after{
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='25' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.563 11.688H22.5V2L11.562 3.573v8.115zM10.938 11.688V3.562L2.5 4.782v6.907h8.438zM10.938 12.313H2.5v6.952l8.438 1.172v-8.125zM11.563 12.313v8.154L22.5 22v-9.688H11.562z'/%3E%3C/svg%3E");
+}
+.--svg__icon_windows-before::before {
+    content:'';
+}
+.--svg__icon_windows-after::after {
+    content:'';
+}

@@ -121,10 +121,41 @@
 
 @mixin hover {
   @include mouse {
-    @content;
+    &:hover {
+      @content;
+    }
   }
 
   @include touch {
-    @content;
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin background-image($webp, $image, $webp2x, $image2x, $opacity: 1) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("#{$webp2x}"), url("#{$webp}"), url("#{$image2x}"),
+      url("#{$image}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: $opacity;
+    z-index: -1;
+  }
+
+  // Поддержка только для браузеров, не поддерживающих WebP
+  @supports not (background-image: url("#{$webp}")) {
+    &::before {
+      background-image: url("#{$image2x}"), url("#{$image}");
+    }
   }
 }

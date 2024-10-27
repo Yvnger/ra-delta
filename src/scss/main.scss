@@ -6,3 +6,23 @@
 @import "base/typography";
 @import "base/grid";
 @import "base/utils";
+
+// BEM-blocks
+@import "components/blocks/header";
+@import "components/blocks/nav";
+@import "components/blocks/feature-item";
+@import "components/blocks/os";
+@import "components/blocks/shell";
+
+// Elements
+@import "components/elements/hamburger";
+@import "components/elements/button";
+@import "components/elements/circle-progress";
+
+// Sections
+@import "components/sections/hero";
+@import "components/sections/section";
+@import "components/sections/features";
+@import "components/sections/capability";
+
+@import "../../node_modules/swiper/swiper.scss";

@@ -1,0 +1,267 @@
+.hero {
+  display: flex;
+  align-items: flex-start;
+  min-height: 863px;
+  background: linear-gradient(
+    89deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(130, 175, 242, 0.18) 50%,
+    rgba(5, 95, 229, 0.18) 100%
+  );
+
+  @include tablet {
+    min-height: unset;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    grid-template-areas: "info illustration";
+    padding-top: 145px;
+    padding-bottom: 50px;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding-top: 24px;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-area: info;
+    grid-template-areas: "heading heading heading heading . ." "description description description description description ." "action action action action action .";
+    gap: 33px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    @include mobile {
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    grid-area: heading;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    color: $dark;
+
+    @include tablet {
+      gap: 12px;
+    }
+
+    @include mobile {
+      gap: 8px;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 98px;
+    line-height: 104px;
+    letter-spacing: 2.3px;
+    white-space: nowrap;
+
+    @include tablet {
+      font-size: 50px;
+      line-height: 58px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.8px;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    grid-area: description;
+    margin: 0;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.7px;
+    color: $gray-400;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    grid-area: action;
+    max-width: 460px;
+
+    @include tablet {
+      max-width: 320px;
+    }
+
+    @include mobile {
+      gap: 4px;
+    }
+
+    &-btn {
+      &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: currentColor;
+      }
+
+      &--windows {
+        &::before {
+          mask: url("data:image/svg+xml;charset=utf8, %3Csvg width='25' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.563 11.688H22.5V2L11.562 3.573v8.115zM10.938 11.688V3.562L2.5 4.782v6.907h8.438zM10.938 12.313H2.5v6.952l8.438 1.172v-8.125zM11.563 12.313v8.154L22.5 22v-9.688H11.562z'/%3E%3C/svg%3E");
+        }
+      }
+    }
+
+    &-caption {
+      display: block;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      color: $gray-400;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__illustration {
+    position: relative;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &-wrap {
+      @include tablet {
+        transform: scale(0.7);
+        flex-shrink: 1;
+        max-width: fit-content;
+      }
+    }
+
+    &-folder {
+      position: absolute;
+      top: -151px;
+      left: 7px;
+      z-index: 10;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-window {
+      position: absolute;
+      top: -21px;
+      left: 133px;
+      z-index: 20;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-laptop {
+      position: absolute;
+      bottom: -137px;
+      left: -24px;
+      z-index: 30;
+
+      @include tablet {
+        position: relative;
+        bottom: unset;
+      }
+    }
+
+    &-photo {
+      position: absolute;
+      z-index: 40;
+
+      &-wrap {
+        @include tablet {
+          position: absolute;
+          top: 80px;
+          left: -40px;
+        }
+      }
+
+      &--1 {
+        bottom: -74px;
+        left: 172px;
+      }
+
+      &--2 {
+        left: 265px;
+        bottom: -37px;
+      }
+
+      &--3 {
+        left: 398px;
+        bottom: -52px;
+      }
+    }
+
+    &-folder,
+    &-window,
+    &-laptop,
+    &-photo {
+      opacity: 0;
+    }
+  }
+}

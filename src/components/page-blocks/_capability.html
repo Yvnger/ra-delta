@@ -1,0 +1,132 @@
+<section class="section section--alt capability" id="capability">
+  <div class="container">
+    <h2 class="section__title">Кроссплатформенность и работа с форматами</h2>
+
+    <ul class="capability__items">
+      <li class="capability__item capability-item">
+        <span class="capability-item__label">Совместим с платформами</span>
+        <div class="capability-item__value">
+          <div
+            class="capability-item__value-row capability-item__value-row--os"
+          >
+            <div class="os">
+              <picture>
+                <source srcset="./img/os-icon-macos.webp" type="image/webp" />
+                <source
+                  srcset="./img/os-icon-macos@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source srcset="./img/os-icon-macos.png" type="image/png" />
+                <source
+                  srcset="./img/os-icon-macos@2x.png 2x"
+                  type="image/png"
+                />
+                <img
+                  class="os__icon os__icon--macos"
+                  src="./img/os-icon-macos.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="os">
+              <picture>
+                <source srcset="./img/os-icon-windows.webp" type="image/webp" />
+                <source
+                  srcset="./img/os-icon-windows@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source srcset="./img/os-icon-windows.png" type="image/png" />
+                <source
+                  srcset="./img/os-icon-windows@2x.png 2x"
+                  type="image/png"
+                />
+                <img
+                  class="os__icon os__icon--windows"
+                  src="./img/os-icon-windows.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="os">
+              <picture>
+                <source srcset="./img/os-icon-linux.webp" type="image/webp" />
+                <source
+                  srcset="./img/os-icon-linux@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source srcset="./img/os-icon-linux.png" type="image/png" />
+                <source
+                  srcset="./img/os-icon-linux@2x.png 2x"
+                  type="image/png"
+                />
+                <img
+                  class="os__icon os__icon--linux"
+                  src="./img/os-icon-linux.png"
+                  alt=""
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="capability__item capability-item">
+        <span class="capability-item__label">
+          Форматы, которые 7–Zip может запаковывать и распаковать
+        </span>
+
+        <div class="capability-item__value">
+          <div class="capability-item__value-row">
+            @@loop('../bem-blocks/shell.html', [ {"format":"7z","type":"h",
+            "slider": false}, {"format":"ZIP","type":"h", "slider": false},
+            {"format":"WIM","type":"h", "slider": false},
+            {"format":"XZ","type":"h", "slider": false},
+            {"format":"GZIP","type":"h", "slider": false},
+            {"format":"TAR","type":"h", "slider": false}, ])
+          </div>
+        </div>
+      </li>
+      <li class="capability__item capability-item">
+        <span class="capability-item__label">
+          Форматы, которые 7–Zip может распаковать
+        </span>
+        <div class="capability-item__value">
+          <div class="capability-item__slider" data-swiper-autoplay="2000">
+            <div class="swiper-wrapper">
+              @@loop('../bem-blocks/shell.html', [ {"format":"APFS","type":"v",
+              "slider": true}, {"format":"AR","type":"v", "slider": true},
+              {"format":"ARJ","type":"v", "slider": true},
+              {"format":"CAB","type":"v", "slider": true},
+              {"format":"CHM","type":"v", "slider": true},
+              {"format":"CPIO","type":"v", "slider": true},
+              {"format":"CramFS","type":"v", "slider": true},
+              {"format":"DMG","type":"v", "slider": true},
+              {"format":"EXT","type":"v", "slider": true},
+              {"format":"FAT","type":"v", "slider": true},
+              {"format":"GPT","type":"v", "slider": true},
+              {"format":"HFS","type":"v", "slider": true},
+              {"format":"IHEX","type":"v", "slider": true},
+              {"format":"ISO","type":"v", "slider": true},
+              {"format":"LZH","type":"v", "slider": true},
+              {"format":"LZMA","type":"v", "slider": true},
+              {"format":"MBR","type":"v", "slider": true},
+              {"format":"MSI","type":"v", "slider": true},
+              {"format":"NSIS","type":"v", "slider": true},
+              {"format":"NTFS","type":"v", "slider": true},
+              {"format":"QCOW2","type":"v", "slider": true},
+              {"format":"RAR","type":"v", "slider": true},
+              {"format":"RPM","type":"v", "slider": true},
+              {"format":"UDF","type":"v", "slider": true},
+              {"format":"UEFI","type":"v", "slider": true},
+              {"format":"VDI","type":"v", "slider": true},
+              {"format":"VHD","type":"v", "slider": true},
+              {"format":"VHDX","type":"v", "slider": true},
+              {"format":"VMDK","type":"v", "slider": true},
+              {"format":"XAR","type":"v", "slider": true},
+              {"format":"Z","type":"v", "slider": true}, ])
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

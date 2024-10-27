@@ -1,0 +1,79 @@
+.features {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+    @include tablet {
+      display: flex;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    padding: 23px;
+    border: 1px solid #cddef9;
+    border-radius: 12px;
+    background-color: #f4f8fd;
+
+    @include tablet {
+      padding: 16px 12px;
+    }
+
+    @include mobile {
+      padding: 8px;
+    }
+  }
+
+  &__list {
+    @include resetList;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+
+    @include mobile {
+      flex-direction: row;
+      gap: 4px;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &-detail {
+    padding-right: 21px;
+    padding-left: 24px;
+    @include transition(opacity);
+
+    @include tablet {
+      padding: 24px;
+    }
+
+    &__description {
+      margin: 0;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+      color: $dark;
+
+      @include tablet {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+    }
+
+    &--changing {
+      opacity: 0;
+    }
+  }
+}

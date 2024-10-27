@@ -1,0 +1,75 @@
+.feature {
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 12px;
+    @include transition(background-color);
+
+    @include tablet {
+      justify-content: center;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    &--current {
+      background-color: #fff;
+    }
+
+    &__icon {
+      position: relative;
+      display: block;
+      user-select: none;
+
+      @include mobile {
+        width: 19px;
+        height: 19px;
+      }
+
+      &-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        height: 58px;
+
+        @include mobile {
+          width: 29px;
+          height: 29px;
+        }
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.6px;
+      color: $dark;
+      user-select: none;
+
+      @include tablet {
+        display: none;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &__progress {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      @include transition(opacity);
+    }
+
+    &--current &__progress {
+      opacity: 1;
+    }
+  }
+}

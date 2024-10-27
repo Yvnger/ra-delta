@@ -1,0 +1,88 @@
+.shell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border: 1px solid $primary-trans;
+  border-radius: 8px;
+  background-color: $white-trans;
+  overflow: hidden;
+
+  @include tablet {
+    width: 75px;
+    height: 75px;
+  }
+
+  &::before {
+    content: "";
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-size: contain;
+  }
+
+  &__label {
+    position: absolute;
+    display: flex;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $dark;
+  }
+
+  &--h {
+    &::before {
+      background-image: url("../img/shell-hor-icon.png");
+      width: 84px;
+      height: 84px;
+
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  &--h &__label {
+    align-items: flex-end;
+    width: 66px;
+    height: 60px;
+    font-size: 17px;
+    line-height: 28px;
+
+    @include tablet {
+      width: 44px;
+      font-size: 10px;
+      line-height: 36px;
+    }
+  }
+
+  &--v {
+    &::before {
+      background-image: url("../img/shell-ver-icon.png");
+      width: 100px;
+      margin-left: -2px;
+      height: 100px;
+
+      @include tablet {
+        height: 80px;
+      }
+    }
+  }
+
+  &--v &__label {
+    align-items: flex-end;
+    justify-content: center;
+    width: 62px;
+    height: 92px;
+    font-size: 18px;
+    line-height: 40px;
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 54px;
+    }
+  }
+}

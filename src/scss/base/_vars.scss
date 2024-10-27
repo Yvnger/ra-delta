@@ -1,28 +1,35 @@
 // Colors
-$blue: #008dd1;
-$cyan: #00ffff;
-$purple: #a0a8f1;
-$gray: #c2c1ca;
-$red: #d10000;
-$rose: #d10096;
-$orange: #ffc700;
-$green: #75d100;
+$white: #ffffff;
+$dark: #100f14;
+$gray-800: #272727;
+$gray-400: #686d68;
+$gray-200: #d2d3d2;
+$primary: #055fe5;
+$blue-300: #b1cef9;
+$blue-200: #34a1f9;
+$blue-100: #1664d2;
+
+$white-trans: rgba($white, 0.35);
+$primary-trans: rgba($primary, 0.35);
+$blue-trans: rgba($blue-200, 0.35);
+
+$circle-progress: #cddef9;
 
 // Font family
-$base-font-family: "Montserrat", sans-serif;
-$heading-font-family: "Nunito", sans-serif;
+$base-font-family: "Inter", sans-serif;
+$sec-font-family: "Open Sans", sans-serif;
 
-$transition-duration: .15s;
-$transition-function: ease-in-out;
+$transition-duration: 0.3s;
+$transition-function: ease-out;
 
-$container-width: 1280px;
-$container-padding: 15px;
+$container-width: 1268px;
+$container-padding: 25px;
 $container-padding-mobile: 10px;
 $container-padding-mobile-sm: 8px;
 
 // Breakpoints
 $mobile-sm: 320px;
-$mobile: 567px;
-$tablet: 767px;
+$mobile: 767px;
+$tablet: 1024px;
 $laptop: 1279px;
 $desktop: 1280px;

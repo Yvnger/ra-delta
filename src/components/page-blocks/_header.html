@@ -1,1 +1,33 @@
-<header class="header"></header>
+<header id="header" class="header">
+  <div class="container">
+    <div class="header__logo-wrap">
+      <svg class="header__logo" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="./img/sprite.svg#logo"></use>
+      </svg>
+    </div>
+
+    <div class="header__nav js-nav-wrap">
+      <nav class="nav js-nav-wrap">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="javascript:void(0)" class="nav__link">О программе</a>
+          </li>
+          <li class="nav__item">
+            <a href="javascript:void(0)" class="nav__link">Функции</a>
+          </li>
+          <li class="nav__item">
+            <a href="javascript:void(0)" class="nav__link">Поддержка</a>
+          </li>
+        </ul>
+
+        <a href="javascript:void(0)" class="btn btn--header nav__download-btn"
+          >Установить 7-zip</a
+        >
+      </nav>
+    </div>
+
+    <button class="header__hamburger hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
