@@ -1,5 +1,6 @@
 import { countHeaderHeight } from "./header";
 import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const hero: HTMLElement | null = document.getElementById('hero');
 setHeroTopPadding();
@@ -81,3 +82,47 @@ function animateHeroIllustrations() {
 }
 
 window.addEventListener('load', animateHeroIllustrations);
+
+// Анимация преимуществ в Hero
+gsap.registerPlugin(ScrollTrigger)
+
+// Создаем timeline для анимации всех элементов
+const heroFeaturesTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".js-hero-features",
+    start: "top 70%",
+    end: "bottom 95%",
+    markers: false,
+  }
+});
+
+heroFeaturesTimeline
+  .from(".js-hero-features-item-1", {
+    opacity: 0,
+    top: "-200px",
+    left: "-200px",
+    duration: 1,
+  })
+  .from(".js-hero-features-item-2", {
+    opacity: 0,
+    top: "-200px",
+    duration: 1,
+  }, "-=1.0")
+  .from(".js-hero-features-item-3", {
+    opacity: 0,
+    top: "-200px",
+    right: "-200px",
+    duration: 1,
+  }, "-=1.0")
+  .from(".js-hero-features-item-4", {
+    opacity: 0,
+    bottom: "-200px",
+    left: "-100px",
+    duration: 1,
+  }, "-=1.0")
+  .from(".js-hero-features-item-5", {
+    opacity: 0,
+    bottom: "-200px",
+    right: "-100px",
+    duration: 1,
+  }, "-=1.0");

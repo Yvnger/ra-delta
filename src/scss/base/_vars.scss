@@ -6,18 +6,17 @@ $gray-400: #686d68;
 $gray-200: #d2d3d2;
 $primary: #055fe5;
 $blue-300: #b1cef9;
-$blue-200: #34a1f9;
+$blue-200: #cddef9;
 $blue-100: #1664d2;
 
 $white-trans: rgba($white, 0.35);
 $primary-trans: rgba($primary, 0.35);
-$blue-trans: rgba($blue-200, 0.35);
+$blue-trans: rgba($blue-200, 0.25);
 
 $circle-progress: #cddef9;
 
 // Font family
 $base-font-family: "Inter", sans-serif;
-$sec-font-family: "Open Sans", sans-serif;
 
 $transition-duration: 0.3s;
 $transition-function: ease-out;

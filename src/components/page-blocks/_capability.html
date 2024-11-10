@@ -76,7 +76,7 @@
 
         <div class="capability-item__value">
           <div class="capability-item__value-row">
-            @@loop('../bem-blocks/shell.html', [ {"format":"7z","type":"h",
+            @@loop('../bem-blocks/_shell.html', [ {"format":"7z","type":"h",
             "slider": false}, {"format":"ZIP","type":"h", "slider": false},
             {"format":"WIM","type":"h", "slider": false},
             {"format":"XZ","type":"h", "slider": false},
@@ -92,7 +92,7 @@
         <div class="capability-item__value">
           <div class="capability-item__slider" data-swiper-autoplay="2000">
             <div class="swiper-wrapper">
-              @@loop('../bem-blocks/shell.html', [ {"format":"APFS","type":"v",
+              @@loop('../bem-blocks/_shell.html', [ {"format":"APFS","type":"v",
               "slider": true}, {"format":"AR","type":"v", "slider": true},
               {"format":"ARJ","type":"v", "slider": true},
               {"format":"CAB","type":"v", "slider": true},
@@ -128,5 +128,7 @@
         </div>
       </li>
     </ul>
+
+    @@include('../bem-blocks/_download-action.html', {"centered":true})
   </div>
 </section>

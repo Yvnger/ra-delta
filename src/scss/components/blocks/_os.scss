@@ -6,7 +6,7 @@
   outline: 1px solid $white-trans;
   outline-offset: -1px;
   border-radius: 8px;
-  padding: 23px 32px;
+  padding: 23px 29px;
 
   @include tablet {
     width: 100%;
@@ -17,19 +17,10 @@
     width: 100%;
     height: auto;
 
-    &--macos {
-      // width: 144px;
-      // height: 38px;
-    }
+    // &--macos {}
 
-    &--windows {
-      // width: 225px;
-      // height: 54px;
-    }
+    // &--windows {}
 
-    &--linux {
-      // width: 112px;
-      // height: 48px;
-    }
+    // &--linux {}
   }
 }

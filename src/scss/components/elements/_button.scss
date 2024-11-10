@@ -6,9 +6,10 @@
   justify-content: center;
   gap: 9px;
   border-radius: 12px;
-  font-family: $sec-font-family;
+  font-family: $base-font-family;
   text-decoration: none;
   text-align: center;
+  white-space: nowrap;
   @include transition(background-position, color);
   overflow: hidden;
 
@@ -17,57 +18,26 @@
   }
 
   &--header {
-    padding: 13px 25px;
-    background: linear-gradient(
-      90deg,
-      $primary 0%,
-      $primary 50%,
-      $dark 50%,
-      $dark 100%
-    );
+    margin-right: -1px;
+    padding: 13px 26px;
+    max-width: 185px;
+    width: 100%;
+    background: linear-gradient(90deg, $primary 0%, $primary 50%, $dark 50%, $dark 100%);
     background-position: 100%;
     background-size: 200%;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
+    @include text16b;
     color: $white;
-
-    @include tablet {
-      padding: 10px 22px;
-      font-size: 14px;
-      line-height: 20px;
-    }
   }
 
-  &--hero {
-    padding: 11px 20px 12px;
+  &--download {
+    padding: 20px 20px 20px 17px;
     max-width: 598px;
     width: 100%;
-
-    background: linear-gradient(
-      90deg,
-      $white 0%,
-      $white 50%,
-      $primary 50%,
-      $primary 100%
-    );
-
+    background: linear-gradient(90deg, $gray-800 0%, $gray-800 50%, $primary 50%, $primary 100%);
     background-position: 100%;
     background-size: 200%;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 36px;
-    text-align: center;
+    @include text20sb;
+    letter-spacing: 0.1px;
     color: #fff;
-
-    @include tablet {
-      padding: 8px 14px;
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    &:hover {
-      color: $dark;
-    }
   }
 }

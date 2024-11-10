@@ -1,0 +1,114 @@
+.promo {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    grid-template-areas: "info info info info info illustration illustration illustration illustration illustration illustration illustration";
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    grid-area: info;
+  }
+
+  &__title {
+    margin: 0;
+    @include h2;
+    letter-spacing: 0.8px;
+    color: $dark;
+  }
+
+  &__description {
+    margin: 0;
+    @include text24m;
+    letter-spacing: 0.4px;
+    color: $dark;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      @include resetList;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @include text16r;
+      letter-spacing: 0.3px;
+      color: $dark;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url("../img/promo-list-mark.webp"),
+          url("../img/promo-list-mark.png"),
+          url("../img/promo-list-mark@2x.webp"),
+          url("../img/promo-list-mark@2x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__illustration {
+    position: relative;
+    grid-area: illustration;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      height: max-content;
+      background-color: $white-trans;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 2px 2px 0 rgba(16, 24, 55, 0.04),
+        0 4px 4px 0 rgba(176, 205, 247, 0.2);
+      outline: 1px solid $primary-trans;
+      outline-offset: -1px;
+      border-radius: 12px;
+
+      &:nth-child(1) {
+        position: absolute;
+        top: 80px;
+        left: 108px;
+        z-index: 30;
+        width: 304px;
+        height: 304px;
+        transform: rotate(13.84deg);
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        top: -10px;
+        right: 66px;
+        z-index: 20;
+        width: 252px;
+        height: 252px;
+        transform: rotate(-18.65deg);
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        right: 122px;
+        bottom: -42px;
+        z-index: 10;
+        width: 228px;
+        height: 228px;
+        transform: rotate(-1.04deg);
+      }
+    }
+  }
+}

@@ -1,3 +1,82 @@
+@mixin h1 {
+  font-family: $base-font-family;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: 0.2px;
+}
+
+@mixin h2 {
+  font-family: $base-font-family;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.2px;
+}
+
+@mixin text24b {
+  font-family: $base-font-family;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@mixin text24m {
+  font-family: $base-font-family;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin text20sb {
+  font-family: $base-font-family;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin text20m {
+  font-family: $base-font-family;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin text20r {
+  font-family: $base-font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@mixin text18m {
+  font-family: $base-font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin text16b {
+  font-family: $base-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin text16r {
+  font-family: $base-font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text14r {
+  font-family: $base-font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 html {
   font-family: $base-font-family;
 }

@@ -9,10 +9,15 @@
 
 // BEM-blocks
 @import "components/blocks/header";
+@import "components/blocks/logo";
 @import "components/blocks/nav";
+@import "components/blocks/download-action";
+@import "components/blocks/hero-features";
 @import "components/blocks/feature-item";
 @import "components/blocks/os";
 @import "components/blocks/shell";
+@import "components/blocks/faq-item";
+@import "components/blocks/footer";
 
 // Elements
 @import "components/elements/hamburger";
@@ -24,5 +29,7 @@
 @import "components/sections/section";
 @import "components/sections/features";
 @import "components/sections/capability";
+@import "components/sections/faq";
+@import "components/sections/promo";
 
 @import "../../node_modules/swiper/swiper.scss";

@@ -19,39 +19,10 @@
     }
   }
 
-  &__logo {
-    display: block;
-    width: 76px;
-    height: 80px;
-
-    @include mobile {
-      width: 60px;
-      height: 40px;
-    }
-
-    // &-wrap {}
-  }
+  // &__logo {}
 
   &__nav {
-    @include mobile {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      pointer-events: none;
-      @include transition(opacity);
-
-      &--opened {
-        opacity: 1;
-        pointer-events: auto;
-      }
-    }
-  }
-
-  &--opened {
-    background-color: #fff;
+    margin-right: 1px;
   }
 
   &__hamburger {

@@ -1,0 +1,38 @@
+.hero-features {
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px 28px;
+    @include resetList;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 19px 20px;
+    max-width: 384px;
+    background-color: $white-trans;
+    border: 1px solid $primary-trans;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 4px 0 rgba(176, 205, 247, 0.25);
+  }
+
+  &__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    margin: 0;
+    margin-top: 1px;
+    @include text18m;
+    letter-spacing: 0.4px;
+    color: $dark;
+  }
+}

@@ -1,0 +1,27 @@
+.faq {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 28px;
+  }
+
+  &__items {
+    @include resetList;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__feedback {
+    padding-top: 60px;
+    @include text20m;
+    text-align: center;
+    letter-spacing: 0.4px;
+
+    a {
+      border-bottom: 1px solid $primary;
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}

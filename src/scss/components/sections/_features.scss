@@ -1,8 +1,8 @@
 .features {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 28px;
 
     @include tablet {
       display: flex;
@@ -14,17 +14,13 @@
   }
 
   &__column {
-    padding: 23px;
-    border: 1px solid #cddef9;
+    padding: 22px;
+    border: 2px solid #cddef9;
     border-radius: 12px;
     background-color: #f4f8fd;
 
-    @include tablet {
-      padding: 16px 12px;
-    }
-
-    @include mobile {
-      padding: 8px;
+    &--detail {
+      padding: 22px 47px;
     }
   }
 
@@ -46,8 +42,10 @@
   }
 
   &-detail {
-    padding-right: 21px;
-    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     @include transition(opacity);
 
     @include tablet {
@@ -56,9 +54,8 @@
 
     &__description {
       margin: 0;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 32px;
+      @include text20r;
+      letter-spacing: 0.4px;
       color: $dark;
 
       @include tablet {
@@ -69,7 +66,8 @@
 
     &__image {
       display: block;
-      width: 100%;
+      width: 524px;
+      height: 440px;
     }
 
     &--changing {

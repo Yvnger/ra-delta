@@ -1,76 +1,217 @@
 <section class="hero" id="hero">
   <div class="container">
-    <div class="hero__info">
-      <div class="hero__heading">
-        <h1 class="hero__title">7–Zip</h1>
-        <p class="hero__subtitle">Идеальный инструмент для архивации</p>
-      </div>
-      <p class="hero__description">
-        Надёжное сжатие, шифрование и управление файлами
-      </p>
+    <div class="hero__main">
+      <div class="hero__info">
+        <div class="hero__heading">
+          <h1 class="hero__title">7–Zip</h1>
+          <p class="hero__subtitle">Идеальный инструмент для архивации</p>
+        </div>
+        <p class="hero__description">
+          Надёжное сжатие, шифрование и управление файлами
+        </p>
 
-      <div class="hero__action">
-        <a
-          href="javascript:void(0)"
-          class="btn btn--hero hero__action-btn hero__action-btn--windows"
-        >
-          Скачать для Windows
-        </a>
-
-        <span class="hero__action-caption">Совместим с Windows XP и выше</span>
-      </div>
-    </div>
-
-    <div class="hero__illustration">
-      <div class="hero__illustration-wrap">
-        <picture>
-          <source
-            srcset="./img/hero/folder.webp 1x, ./img/hero/folder@2x.webp 2x"
-          />
-          <img
-            class="hero__illustration-folder"
-            src="./img/hero/folder.png"
-            alt=""
-          />
-        </picture>
-        <picture>
-          <img
-            class="hero__illustration-laptop"
-            src="./img/hero/laptop.svg"
-            alt=""
-          />
-        </picture>
-        <picture>
-          <img
-            class="hero__illustration-window"
-            src="./img/hero/window.svg"
-            alt=""
-          />
-        </picture>
-        <div class="hero__illustration-photo-wrap">
-          <picture>
-            <img
-              class="hero__illustration-photo hero__illustration-photo--1"
-              src="./img/hero/photo_1.svg"
-              alt=""
-            />
-          </picture>
-          <picture>
-            <img
-              class="hero__illustration-photo hero__illustration-photo--2"
-              src="./img/hero/photo_2.svg"
-              alt=""
-            />
-          </picture>
-          <picture>
-            <img
-              class="hero__illustration-photo hero__illustration-photo--3"
-              src="./img/hero/photo_3.svg"
-              alt=""
-            />
-          </picture>
+        <div class="hero__action">
+          @@include('../bem-blocks/_download-action.html', {"centered": false})
         </div>
       </div>
+
+      <div class="hero__illustration">
+        <div class="hero__illustration-wrap">
+          <picture>
+            <source
+              srcset="./img/hero/folder.webp 1x, ./img/hero/folder@2x.webp 2x"
+            />
+            <img
+              class="hero__illustration-folder"
+              src="./img/hero/folder.png"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              class="hero__illustration-laptop"
+              src="./img/hero/laptop.svg"
+              alt=""
+            />
+          </picture>
+          <picture>
+            <img
+              class="hero__illustration-window"
+              src="./img/hero/window.svg"
+              alt=""
+            />
+          </picture>
+          <div class="hero__illustration-photo-wrap">
+            <picture>
+              <img
+                class="hero__illustration-photo hero__illustration-photo--1"
+                src="./img/hero/photo_1.svg"
+                alt=""
+              />
+            </picture>
+            <picture>
+              <img
+                class="hero__illustration-photo hero__illustration-photo--2"
+                src="./img/hero/photo_2.svg"
+                alt=""
+              />
+            </picture>
+            <picture>
+              <img
+                class="hero__illustration-photo hero__illustration-photo--3"
+                src="./img/hero/photo_3.svg"
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero__features hero-features js-hero-features">
+      <ul class="hero-features__items">
+        <li class="hero-features__item js-hero-features-item-1">
+          <picture>
+            <source
+              srcset="./img/hero/features/hf-unbox.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-unbox@2x.webp 2x"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-unbox.png"
+              type="image/png"
+            />
+            <source
+              srcset="./img/hero/features/hf-unbox@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              src="./img/hero/features/hf-unbox.png"
+              class="hero-features__icon"
+              alt="Сжатие и разархивирование файлов"
+            />
+          </picture>
+
+          <p class="hero-features__label">Сжатие и разархивирование файлов</p>
+        </li>
+
+        <li class="hero-features__item js-hero-features-item-2">
+          <picture>
+            <source
+              srcset="./img/hero/features/hf-key.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-key@2x.webp 2x"
+              type="image/webp"
+            />
+            <source srcset="./img/hero/features/hf-key.png" type="image/png" />
+            <source
+              srcset="./img/hero/features/hf-key@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              src="./img/hero/features/hf-key.png"
+              class="hero-features__icon"
+              alt="Шифрование данных и использование паролей"
+            />
+          </picture>
+
+          <p class="hero-features__label">
+            Шифрование данных и использование паролей
+          </p>
+        </li>
+
+        <li class="hero-features__item js-hero-features-item-3">
+          <picture>
+            <source
+              srcset="./img/hero/features/hf-diskette.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-diskette@2x.webp 2x"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-diskette.png"
+              type="image/png"
+            />
+            <source
+              srcset="./img/hero/features/hf-diskette@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              src="./img/hero/features/hf-diskette.png"
+              class="hero-features__icon"
+              alt="Создание и восстановление резервных копий"
+            />
+          </picture>
+
+          <p class="hero-features__label">
+            Создание и восстановление резервных копий
+          </p>
+        </li>
+
+        <li class="hero-features__item js-hero-features-item-4">
+          <picture>
+            <source
+              srcset="./img/hero/features/hf-winexp.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-winexp@2x.webp 2x"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-winexp.png"
+              type="image/png"
+            />
+            <source
+              srcset="./img/hero/features/hf-winexp@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              src="./img/hero/features/hf-winexp.png"
+              class="hero-features__icon"
+              alt="Интеграция в проводник Windows"
+            />
+          </picture>
+
+          <p class="hero-features__label">Интеграция в проводник Windows</p>
+        </li>
+
+        <li class="hero-features__item js-hero-features-item-5">
+          <picture>
+            <source
+              srcset="./img/hero/features/hf-icon.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/hero/features/hf-icon@2x.webp 2x"
+              type="image/webp"
+            />
+            <source srcset="./img/hero/features/hf-icon.png" type="image/png" />
+            <source
+              srcset="./img/hero/features/hf-icon@2x.png 2x"
+              type="image/png"
+            />
+            <img
+              src="./img/hero/features/hf-icon.png"
+              class="hero-features__icon"
+              alt="Поддержка популярных форматов: ZIP, 7z, RAR"
+            />
+          </picture>
+
+          <p class="hero-features__label">
+            Поддержка популярных форматов: ZIP, 7z, RAR
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

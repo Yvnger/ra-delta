@@ -4,7 +4,7 @@ const featureDetailDescription: HTMLParagraphElement | null = featureDetailWrap?
 const featureDetailPicture: HTMLPictureElement | null = featureDetailWrap?.querySelector('picture') as HTMLPictureElement;
 
 const featureActiveClass: string = 'feature-item--current';
-const intervalTime: number = 5000;
+const intervalTime: number = 50000;
 
 let currentIndex: number = 0; // Индекс текущего активного элемента
 let intervalId: any = null; // Переменная для хранения идентификатора интервала

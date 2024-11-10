@@ -1,19 +1,10 @@
 .capability {
-  padding: 148px 0 120px;
-
-  @include tablet {
-    padding: 80px 0;
-  }
-
   &__items {
     @include resetList;
     display: flex;
     flex-direction: column;
-    gap: 80px;
-
-    @include tablet {
-      gap: 40px;
-    }
+    gap: 60px;
+    margin-bottom: 80px;
   }
 
   &-item {
@@ -41,8 +32,8 @@
       padding-left: 12px;
       font-weight: 500;
       font-size: 28px;
-      line-height: 42px;
-      letter-spacing: 0.7px;
+      line-height: 40px;
+      letter-spacing: 0.8px;
       color: $dark;
 
       @include tablet {
@@ -155,4 +146,6 @@
       }
     }
   }
+
+  // &__action {}
 }

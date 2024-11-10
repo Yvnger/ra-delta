@@ -1,0 +1,36 @@
+.download-action {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 460px;
+  width: 100%;
+
+  &--centered {
+    margin: 0 auto;
+  }
+
+  &__btn {
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-color: currentColor;
+    }
+
+    &--windows {
+      &::before {
+        mask: url("data:image/svg+xml;charset=utf8, %3Csvg width='25' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.563 11.688H22.5V2L11.562 3.573v8.115zM10.938 11.688V3.562L2.5 4.782v6.907h8.438zM10.938 12.313H2.5v6.952l8.438 1.172v-8.125zM11.563 12.313v8.154L22.5 22v-9.688H11.562z'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  &__caption {
+    display: block;
+    width: 100%;
+    @include text14r;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: $gray-400;
+  }
+}
