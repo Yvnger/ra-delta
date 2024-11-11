@@ -17,9 +17,11 @@
 <body>
     <header id="header" class="header">
   <div class="container">
-    <div class="header__logo"><svg class="logo" xmlns="http://www.w3.org/2000/svg">
-  <use xlink:href="./img/sprite.svg#logo"></use>
-</svg>
+    <div class="header__logo"><a href="javascript:void(0)" class="logo__link">
+  <svg class="logo" xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="./img/sprite.svg#logo"></use>
+  </svg>
+</a>
 </div>
 
     <div class="header__nav js-nav-wrap">
@@ -327,7 +329,7 @@
                   class="feature-item__icon"
                   src="./img/features/1-features-icon.png"
                   srcset="./img/features/1-features-icon@2x.png"
-                  alt="Открытый исходный код"
+                  alt="Иконка №1"
                 />
               </picture>
             </div>
@@ -377,7 +379,7 @@
                   class="feature-item__icon"
                   src="./img/features/2-features-icon.png"
                   srcset="./img/features/2-features-icon@2x.png"
-                  alt="Высокая степень сжатия"
+                  alt="Иконка №2"
                 />
               </picture>
             </div>
@@ -415,7 +417,7 @@
                   class="feature-item__icon"
                   src="./img/features/3-features-icon.png"
                   srcset="./img/features/3-features-icon@2x.png"
-                  alt="Надёжное шифрование"
+                  alt="Иконка №3"
                 />
               </picture>
             </div>
@@ -453,7 +455,7 @@
                   class="feature-item__icon"
                   src="./img/features/4-features-icon.png"
                   srcset="./img/features/4-features-icon@2x.png"
-                  alt="Многопоточное сжатие файлов"
+                  alt="Иконка №4"
                 />
               </picture>
             </div>
@@ -491,7 +493,7 @@
                   class="feature-item__icon"
                   src="./img/features/5-features-icon.png"
                   srcset="./img/features/5-features-icon@2x.png"
-                  alt="Тестирования архивов"
+                  alt="Иконка №5"
                 />
               </picture>
             </div>
@@ -529,7 +531,7 @@
                   class="feature-item__icon"
                   src="./img/features/6-features-icon.png"
                   srcset="./img/features/6-features-icon@2x.png"
-                  alt="Русскоязычный интерфейс"
+                  alt="Иконка №6"
                 />
             </div>
 
@@ -600,7 +602,7 @@
                 <img
                   class="os__icon os__icon--macos"
                   src="./img/os-icon-macos.png"
-                  alt=""
+                  alt="MacOS"
                 />
               </picture>
             </div>
@@ -619,7 +621,7 @@
                 <img
                   class="os__icon os__icon--windows"
                   src="./img/os-icon-windows.png"
-                  alt=""
+                  alt="Windows"
                 />
               </picture>
             </div>
@@ -638,7 +640,7 @@
                 <img
                   class="os__icon os__icon--linux"
                   src="./img/os-icon-linux.png"
-                  alt=""
+                  alt="Linux"
                 />
               </picture>
             </div>
@@ -996,7 +998,7 @@
       <section class="section faq" id="faq">
   <div class="container">
     <h2 class="section__title faq__title">
-      Отвечаем на часто задаваемые вопрсоы
+      Отвечаем на часто задаваемые вопросы
     </h2>
 
     <div class="faq__wrap">
@@ -1025,7 +1027,7 @@
           <li class="faq__item faq-item js-faq-item">
             <div class="faq-item__heading js-faq-item-heading">
               <p class="faq-item__question">
-                Как создать архив с паролем в 7-Zip?
+                Как создать архив с паролем в 7‑Zip?
               </p>
 
               <button
@@ -1037,11 +1039,11 @@
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
                 Выберите файлы, которые хотите заархивировать. Щелкните правой
-                кнопкой мыши и выберите пункт "7-Zip" в контекстном меню, а
+                кнопкой мыши и выберите пункт "7‑Zip" в контекстном меню, а
                 затем пункт "Добавить к архиву". Откроется окно настроек архива.
                 В этом окне в разделе "Шифрование" введите желаемый пароль
                 дважды в соответствующие поля. Нажмите кнопку "ОК".<br />
-                7-Zip создаст архив с выбранными файлами и защитит его паролем.
+                7‑Zip создаст архив с выбранными файлами и защитит его паролем.
               </p>
             </div>
           </li>
@@ -1070,7 +1072,7 @@
           <li class="faq__item faq-item js-faq-item">
             <div class="faq-item__heading js-faq-item-heading">
               <p class="faq-item__question">
-                Почему 7-Zip не может открыть архивы RAR?
+                Почему 7‑Zip не может открыть архивы RAR?
               </p>
 
               <button
@@ -1081,8 +1083,8 @@
 
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
-                7-Zip 9.20 поддерживает только форматы RAR 2/3/4 и не
-                поддерживает архивы RAR5. Но последние версии 7-Zip поддерживают
+                7‑Zip 9.20 поддерживает только форматы RAR 2/3/4 и не
+                поддерживает архивы RAR5. Но последние версии 7‑Zip поддерживают
                 архивы RAR5, поэтому попробуйте обновить программу до нужной
                 версии.
               </p>
@@ -1102,10 +1104,10 @@
 
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
-                При открытии архива 7-Zip обычно предлагает проверить его
+                При открытии архива 7‑Zip обычно предлагает проверить его
                 целостность. Если появилось уведомление о том, что архив
                 повреждён попробуйте восстановить повреждённые данные средствами
-                7-Zip или, если у вас есть резервная копия, восстановите данные
+                7‑Zip или, если у вас есть резервная копия, восстановите данные
                 из неё.
               </p>
             </div>
@@ -1129,7 +1131,7 @@
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
                 Выберите файлы, которые хотите заархивировать. Щелкните правой
-                кнопкой мыши и выберите пункт "7-Zip" в контекстном меню, а
+                кнопкой мыши и выберите пункт "7‑Zip" в контекстном меню, а
                 затем пункт "Добавить к архиву". В окне настроек архива в блоке
                 "Опции" отметьте пункт "Создать SFX-архив" и нажмите кнопку
                 "ОК".  Для создания SFX архивов лучше использовать форматы 7z
@@ -1140,7 +1142,7 @@
           <li class="faq__item faq-item js-faq-item">
             <div class="faq-item__heading js-faq-item-heading">
               <p class="faq-item__question">
-                На каких операционных системах работает 7-Zip?
+                На каких операционных системах работает 7‑Zip?
               </p>
 
               <button
@@ -1152,10 +1154,10 @@
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
                 Основная платформа – Windows. Также благодаря проекту p7zip,
-                7-Zip доступен и на POSIX-совместимых системах  (Linux, macOS).
+                7‑Zip доступен и на POSIX-совместимых системах  (Linux, macOS).
                 Однако, в отличие от Windows версии, здесь используется в
                 основном консольный интерфейс. Кроме того, существуют
-                неофициальные порты 7-Zip для других операционных систем, таких
+                неофициальные порты 7‑Zip для других операционных систем, таких
                 как FreeBSD, Amiga, Solaris и AIX. Однако, их поддержка может
                 быть ограниченной.
               </p>
@@ -1164,7 +1166,7 @@
           <li class="faq__item faq-item js-faq-item">
             <div class="faq-item__heading js-faq-item-heading">
               <p class="faq-item__question">
-                В архивы с какими форматами можно упаковать с помощью 7-Zip?
+                В архивы с какими форматами можно упаковать с помощью 7‑Zip?
               </p>
 
               <button
@@ -1176,7 +1178,7 @@
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
                 Для упаковывания архива вы можете выбрать следующие форматы: 7z,
-                XZ, BZIP2, GZIP, TAR, ZIP и WIM.  Если вы хотите создать
+                XZ, BZIP2, GZIP, TAR, ZIP и WIM. Если вы хотите создать
                 SFX-архив, то лучше использовать форматы 7z или ZIP.
               </p>
             </div>
@@ -1184,7 +1186,7 @@
           <li class="faq__item faq-item js-faq-item">
             <div class="faq-item__heading js-faq-item-heading">
               <p class="faq-item__question">
-                Какие форматы можно распаковать с помощью 7-Zip?
+                Какие форматы можно распаковать с помощью 7‑Zip?
               </p>
 
               <button
@@ -1195,7 +1197,7 @@
 
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
-                С помощью 7-Zip вы можете распаковать архивы с форматами: APFS,
+                С помощью 7‑Zip вы можете распаковать архивы с форматами: APFS,
                 AR, ARJ, CAB, CHM, CPIO, CramFS, DMG, EXT, FAT, GPT, HFS, IHEX,
                 ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, QCOW2, RAR, RPM, SquashFS,
                 UDF, UEFI, VDI, VHD, VHDX, VMDK, XAR и Z.
@@ -1205,7 +1207,7 @@
           <li class="faq__item faq-item js-faq-item">
             <div class="faq-item__heading js-faq-item-heading">
               <p class="faq-item__question">
-                Какие системные требования для 7-Zip?
+                Какие системные требования для 7‑Zip?
               </p>
 
               <button
@@ -1216,7 +1218,7 @@
 
             <div class="faq-item__body js-faq-item-content">
               <p class="faq-item__answer">
-                7-Zip - это довольно легкая программа, и ее системные требования
+                7‑Zip - это довольно легкая программа, и ее системные требования
                 весьма скромны. Она прекрасно работает на большинстве
                 современных компьютеров.
               </p>
@@ -1368,9 +1370,11 @@
     <footer class="footer">
   <div class="container">
     <div class="footer__top">
-      <div class="footer__logo"><svg class="logo" xmlns="http://www.w3.org/2000/svg">
-  <use xlink:href="./img/sprite.svg#logo"></use>
-</svg>
+      <div class="footer__logo"><a href="javascript:void(0)" class="logo__link">
+  <svg class="logo" xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="./img/sprite.svg#logo"></use>
+  </svg>
+</a>
 </div>
       <div class="footer__nav">
         <nav class="nav nav--footer js-footer-nav">
@@ -1398,7 +1402,7 @@
 
     <div class="footer__bottom">
       <div class="footer__policy">
-        <a href="javascript:void(0)" class="footer__policy-link"
+        <a href="javascript:void(0)" class="footer__policy-link" target="_blank"
           >Политика конфиденциальности</a
         >
       </div>
@@ -1408,7 +1412,7 @@
         и информационных целях. Все торговые марки и логотипы, упомянутые
         на этом сайте, принадлежат владельцу программы Igor Pavlov.<br />
         <br />
-        Официальная страница для скачивания программы: https://www.7-zip.org/
+        Официальная страница для скачивания программы: www.7-zip.org/
       </p>
     </div>
   </div>
