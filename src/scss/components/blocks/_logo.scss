@@ -2,4 +2,9 @@
   display: block;
   width: 76px;
   height: 80px;
+
+  &__link {
+    display: block;
+    max-height: fit-content;
+  }
 }
